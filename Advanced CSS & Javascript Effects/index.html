@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
     <title>advanced css & js effects</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="nav">
+            <span class="one active" onclick="changeColor(event)"></span>
+            <i class="one active"></i>
+            <span class="two" onclick="changeColor(event)"></span>
+            <i class="two"></i>
+            <span class="three" onclick="changeColor(event)"></span>
+            <i class="three"></i>
+            <span class="four" onclick="changeColor(event)"></span>
+            <i class="four"></i>
+            <img src="./image/watches_PNG9907.png" alt="watch">
+        </div>
+    </div>
+
+    <script>
+        function changeColor(event){
+            //reset and remove active class first
+            document.querySelectorAll('span.active').forEach(function(item)
+            {
+                item.classList.remove('active')
+            })
+            // add active class to selected menu item   
+            event.target.classList.add('active')
+        }
+        
+
+
+    </script>
 </body>
 </html>

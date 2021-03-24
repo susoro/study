@@ -58,7 +58,8 @@ section{
     left: 0;
     color: #5447cf;
     background: #fff;
-    font-size:2em;
+    font-size:1em;
+    height:40px;
     transform-origin: center;
     transform-style: preserve-3d;
     padding:5px 11px;

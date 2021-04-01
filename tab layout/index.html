@@ -11,20 +11,79 @@
 <body>
     <div class="hero">
         <div class="btn-box">
-            <button><i class="fab fa-html5"></i>html</button>
-            <button><i class="fab fa-css3"></i>css</button>
-            <button><i class="fab fa-js"></i>js</button>
+            <button id="btn1" onclick="openHTML()"><i class="fab fa-html5"></i>html</button>
+            <button id="btn2" onclick="openCSS()"><i class="fab fa-css3"></i>css</button>
+            <button id="btn3" onclick="openJS()"><i class="fab fa-js"></i>js</button>
         </div>
-        <div class="content">
+        <div id="content1" class="content">
             <div class="content-left">
                 <h1>learn html</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sit quod minus magnam! Id quod ratione beatae obcaecati aliquid doloremque? Debitis velit earum adipisci iure consequuntur eveniet, itaque eligendi autem?</p>
                 <a href="#">watch video</a>
             </div>
             <div class="content-right">
-                <img src="./img/10088.jpg" alt="img">
+                <img src="./img/img1.png" alt="img">
+            </div>
+        </div>
+
+        <div id="content2" class="content">
+            <div class="content-left">
+                <h1>learn css</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sit quod minus magnam! Id quod ratione beatae obcaecati aliquid doloremque? Debitis velit earum adipisci iure consequuntur eveniet, itaque eligendi autem?</p>
+                <a href="#">watch video</a>
+            </div>
+            <div class="content-right">
+                <img src="./img/img 2.png" alt="img">
+            </div>
+        </div>
+
+        <div id="content3" class="content">
+            <div class="content-left">
+                <h1>learn js</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sit quod minus magnam! Id quod ratione beatae obcaecati aliquid doloremque? Debitis velit earum adipisci iure consequuntur eveniet, itaque eligendi autem?</p>
+                <a href="#">watch video</a>
+            </div>
+            <div class="content-right">
+                <img src="./img/img3.png" alt="img">
             </div>
         </div>
     </div>
+
+
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+        function openHTML(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(100%)";
+            btn1.style.color = "blueviolet"
+            btn2.style.color = "#000"
+            btn3.style.color = "#000"
+        }
+
+        function openCSS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(100%)";
+            btn2.style.color = "blueviolet"
+            btn1.style.color = "#000"
+            btn3.style.color = "#000"
+        }
+
+        function openJS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(0)";
+            btn3.style.color = "blueviolet"
+            btn2.style.color = "#000"
+            btn1.style.color = "#000"
+        }
+    </script>
 </body>
 </html>

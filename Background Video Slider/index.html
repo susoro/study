@@ -4,19 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Video Slider</title>
+    <title>Background Slider</title>
     <link rel="stylesheet" href="./main.css" type="text/css">
 </head>
 <body>
     <header> 
         <a href="#" class="brand">travel</a>
-        <div class="navigation-items">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Explorer</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explorer</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
     </header>
+
+
+    <section class="home">
+        <img src="./img/pexels-allan-watson-2374666.jpg" alt="img1">
+        <img src="./img/pexels-emiliano-arano-1312488.jpg" alt="img2">
+        <img src="./img/pexels-josh-sorenson-839671.jpg" alt="img3">
+        <img src="./img/pexels-kammeran-gonzalezkeola-6399305.jpg" alt="img4">
+        <img src="./img/pexels-kellie-churchman-1001682.jpg" alt="img5">
+
+        <div class="content">
+            <div class="content">
+                <h1>wonderful<br><span>island</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">read more</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content">
+                <h1>camping<br><span>enjoy</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">read more</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content">
+                <h1>adventures<br><span>off road</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">read more</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content">
+                <h1>road<br><span>trip</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">read more</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content">
+                <h1>feel nature<br><span>relax</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">read more</a>
+            </div>
+        </div>
+
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+     //js 반응형 네비게이션 메뉴!!!
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+
+    // 클릭시 네비게이션 움직움직 버튼 움직움직
+    menuBtn.addEventListener("click", () =>{
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+        // 뭔가 보여지는게 클릭하면 토글 행동하게하라! 처럼생겼음..ㅇ0ㅇ; 
+    });
+    // 제일배우고싶었던 js 슬라이더 네비게이션 
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".vedeo-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var slideerNav = function(manual){
+        btns.forEach((btn) =>{
+            btn.classList.remove("active");
+        })
+        btns.forEach((btn) =>{
+            slide.classList.remove("active");
+        })
+        btns.forEach((btn) =>{
+            content.classList.remove("active");
+        })
+    btns[manual].classList.add("active");
+    slides[manual].classList.add("active");
+    contents[manual].classList.add("active");
+    };
+
+    btns.forEach((btn, i) =>{
+        btn.addEventListener("click", () =>{
+            sliderNav(i);
+        });
+    });
+    </script>
 </body>
 </html>

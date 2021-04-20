@@ -156,7 +156,7 @@ section .home {
     }
 
     .menu-btn{
-        background:url()no-repeat;
+        background:url('./img/menu.png')no-repeat;
         background-size: 30px;
         background-position: center;
         width: 40px;
